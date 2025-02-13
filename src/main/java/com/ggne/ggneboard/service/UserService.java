@@ -20,4 +20,9 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    // 사용자 조회
+    public User getUserById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("ID : " + id  + " 해당 사용자가 존재하지 않습니다."));
+    }
 }
