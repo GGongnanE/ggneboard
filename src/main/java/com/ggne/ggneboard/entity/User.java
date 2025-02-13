@@ -1,6 +1,7 @@
 package com.ggne.ggneboard.entity;
 
 import com.ggne.ggneboard.config.UserRoleEnum;
+import com.ggne.ggneboard.dto.UserDTO;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -52,5 +53,12 @@ public class User {
         this.password = password;
         this.email = email;
         this.role = role;
+    }
+
+    // 사용자 정보 수정
+    public void update(UserDTO userDTO) {
+        this.password = userDTO.getPassword();
+        this.email = userDTO.getEmail();
+        this.username = userDTO.getUsername();
     }
 }

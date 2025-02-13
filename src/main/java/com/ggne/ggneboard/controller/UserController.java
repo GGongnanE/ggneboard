@@ -25,6 +25,12 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    // 사용자 정보 수정 (비밀번호, 이메일, 이름)
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody UserDTO userDTO) {
+        return userService.updateUser(id, userDTO);
+    }
+
     // 사용자 정보 삭제
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Long id) {
