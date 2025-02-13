@@ -2,6 +2,7 @@ package com.ggne.ggneboard.entity;
 
 import com.ggne.ggneboard.config.UserRoleEnum;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -44,6 +45,7 @@ public class User {
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
+    @Builder
     public User(String account, String password, String username, String email, UserRoleEnum role) {
         this.account = account;
         this.username = username;
