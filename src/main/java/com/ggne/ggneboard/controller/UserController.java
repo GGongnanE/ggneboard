@@ -19,9 +19,16 @@ public class UserController {
         this.userService = userService;
     }
 
+    // 사용자 조회
     @GetMapping("/{id}")
     public User getUser(@PathVariable Long id) {
         return userService.getUserById(id);
+    }
+
+    // 사용자 정보 삭제
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
     }
 
     // 사용자 생성
@@ -33,13 +40,13 @@ public class UserController {
         UserRoleEnum role = userDTO.getRole() != null ?
                             UserRoleEnum.valueOf(userDTO.getRole()) : UserRoleEnum.USER;
 
-        User userObj = new User(
-                userDTO.getAccount(),
-                userDTO.getPassword(),
-                userDTO.getEmail(),
-                userDTO.getUsername(),
-                role
-        );
+        User userObj = new User().builder()
+                            .account(userDTO.getAccount())
+                            .password(userDTO.getPassword())
+                            .email(userDTO.getEmail())
+                            .username(userDTO.getUsername())
+                            .role(role)
+                            .build();
 
         return userService.createUser(userObj);
     }
