@@ -6,7 +6,7 @@
 - DB: H2 Database (추후 MySQL or Postgresql로 변경 예정)
 
 ## 프로젝트 관리 노트
-- 노션 링크 추후 공유 예정
+- Notion Link : [프로젝트 노트](https://ggne-work.notion.site/Private-Board-194f943378cd80be87fbd796b2b58a2f)
 - 중요 내역 
     - 2025.02.13 : 프로젝트 생성
 
