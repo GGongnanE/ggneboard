@@ -9,18 +9,18 @@ spring:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: update    # ??? ?? ???? ??
+      ddl-auto: update    # 스키마 자동 업데이트 설정
     properties:
       hibernate:
         validator:
-          apply_to_ddl: false  # DDL ?? ?? ??? ?? ?? ??
-        highlight: true   # ?? ????? ??
-        show_sql: true    # ?? ?? ?? ??
-        format_sql: true  # ?? ??? ?? -> SQL ?? ?? ??
+          apply_to_ddl: false  # DDL 생성 시에 유효성 검사 적용 여부
+        highlight: true   # 쿼리 하이라이트 설정
+        show_sql: true    # 쿼리 로그 출력 설정
+        format_sql: true  # 쿼리 포맷팅 설정 -> SQL 보기 쉽게 출력
   h2:
     console:
-      enabled: true       # H2 ?? ???
-      path: /h2-console    # H2 ?? ?? ??
+      enabled: true       # H2 콘솔 활성화
+      path: /h2-console    # H2 콘솔 접근 경로
   datasource:
     url: jdbc:h2:~/h2_db/test
     username: sa
