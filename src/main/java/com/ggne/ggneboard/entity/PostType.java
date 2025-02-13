@@ -12,6 +12,7 @@ public class PostType {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @Column(name = "post_type_id")
     private Long id;
 
     @Column(nullable = false, unique = true)

@@ -6,14 +6,22 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * DB Table name is 'users'
+ * (Because 'User' is reserved word of H2 database is case-insensitive)
+ *
+ * @author GGNE
+ * @since 2025.02.13
+ */
 @Getter
 @NoArgsConstructor
-@Table(name = "user")
+@Table(name = "users")
 @Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false, unique = true)

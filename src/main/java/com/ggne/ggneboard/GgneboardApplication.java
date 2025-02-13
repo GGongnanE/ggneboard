@@ -9,5 +9,4 @@ public class GgneboardApplication {
     public static void main(String[] args) {
         SpringApplication.run(GgneboardApplication.class, args);
     }
-
 }
