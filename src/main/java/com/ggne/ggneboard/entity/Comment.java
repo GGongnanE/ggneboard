@@ -2,6 +2,7 @@ package com.ggne.ggneboard.entity;
 
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -38,6 +39,7 @@ public class Comment {
      * @param post
      * @param content
      */
+    @Builder
     public Comment(User user, Post post, String content) {
         this.user = user;
         this.post = post;
