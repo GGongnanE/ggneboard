@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Deprecated
 @Getter
 @NoArgsConstructor
 @Table(name = "post_type")
-@Entity
+// @Entity
 public class PostType {
 
     @Id
