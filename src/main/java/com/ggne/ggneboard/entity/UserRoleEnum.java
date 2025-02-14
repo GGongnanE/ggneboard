@@ -1,4 +1,4 @@
-package com.ggne.ggneboard.config;
+package com.ggne.ggneboard.entity;
 
 public enum UserRoleEnum {
     USER("USER"),

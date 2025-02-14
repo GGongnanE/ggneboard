@@ -1,6 +1,6 @@
 package com.ggne.ggneboard.controller;
 
-import com.ggne.ggneboard.config.UserRoleEnum;
+import com.ggne.ggneboard.entity.UserRoleEnum;
 import com.ggne.ggneboard.dto.UserDTO;
 import com.ggne.ggneboard.entity.User;
 import com.ggne.ggneboard.service.UserService;

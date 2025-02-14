@@ -1,6 +1,5 @@
 package com.ggne.ggneboard.entity;
 
-import com.ggne.ggneboard.config.UserRoleEnum;
 import com.ggne.ggneboard.dto.UserDTO;
 import jakarta.persistence.*;
 import lombok.Builder;
